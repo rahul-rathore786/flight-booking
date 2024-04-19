@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Booker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Flight Booker</a>
+        <div>
+          <img style="margin: auto" src="boarding-pass.png" alt="" />
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              ><img src="hamburger.png" alt="" /><a href="index.html">Home</a>
+              <img src="home.png" alt="" />
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+              <a href="contact.html">Contact</a>
+              <img src="credit-card.png" alt="" />
+            </li>
+            <li><img src="dark.png" alt="" /></li>
+            <li><img src="light.png" alt="" /></li>
+          </ul>
+        </nav>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider round">this is a theme</span>
+          </label>
+        </div>
+        <div class="menu-toggle">
+          <button id="menu-btn">
+            <span class="icon hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="search-section">
+        <div class="container">
+          <h1>Find Your Perfect Flight</h1>
+          <img src="seats.png" alt="" />
+          <form id="search-form">
+            <div class="search-field">
+              <label for="from">From:</label>
+              <input
+                type="text"
+                id="from"
+                name="from"
+                placeholder="Enter Origin City"
+              />
+            </div>
+            <div class="search-field">
+              <label for="to">To:</label>
+              <input
+                type="text"
+                id="to"
+                name="to"
+                placeholder="Enter Destination City"
+              />
+            </div>
+            <div class="search-field">
+              <label for="depart-date">Depart Date:</label>
+              <input type="date" id="depart-date" name="depart-date" />
+            </div>
+            <div class="search-field">
+              <label for="return-date">Return Date (Optional):</label>
+              <input type="date" id="return-date" name="return-date" />
+            </div>
+            <div class="search-field passengers">
+              <img src="seat-icon.png" alt="" />
+              <label for="passengers">Passengers:</label>
+              <select name="passengers" id="passengers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <button type="submit">Search Flights</button>
+          </form>
+        </div>
+      </section>
+
+      <div></div>
+
+      <section class="results-section hidden">
+        <div class="container">
+          <h2>Flight Results</h2>
+          <ul class="flight-list"></ul>
+          <div class="pagination hidden"></div>
+        </div>
+      </section>
+
+      <section class="booking-section hidden">
+        <div class="container">
+          <h2>Booking Details</h2>
+          <img src="cart.png" alt="" />
+          <form id="booking-form">
+            <div class="passenger-info"></div>
+            <div class="flight-details"></div>
+            <div class="payment-info">
+              <label for="payment-method">Payment Method:</label>
+              <select name="payment-method" id="payment-method">
+                <option value="credit-card">Credit Card</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="payment-fields hidden"></div>
+            </div>
+            <button type="submit">Confirm Booking</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Flight Booker</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
